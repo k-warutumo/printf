@@ -23,8 +23,10 @@ int _printf(const char *format, ...);
 		}
 		if(format == c)
 		{
-			write(1, format, 1);
+			int num = va_args(list_of_args, int)
 		}
+			write(1, num, strlen(num));
+		
 		if(format == s)
 		{
 			write(1, format, 1);
