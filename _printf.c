@@ -4,7 +4,8 @@
 
 int _printf(const char *format, ...);
 {
-	int jambo = 0;/*char to print*/
+	int jambo = 0;/*an int initialised to 0 since funct returns numb of 
+			characters  printed*/
 
 	va_list(list_of_argu, format)
 	while(*format)
