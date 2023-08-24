@@ -29,26 +29,26 @@ int _printf(const char *format, ...);
 		{
 			format++;/*skip % and  move to next charater*/
 
-		if (format == '\0')/*exclude the end byte as per instruction */
-				break;
+		if (format == '\0') /*exclude the end byte as per instruction */
+		break;
 			if (format == '%')/*chechcks and handles % character */
 				write(1, format, 1);/*to print a second % i.e %% */
 				jambo++;
 
 
-			else if (*format == 'c')/* checks and handles %C character */
-					{
-						char c = va_arg(list_of_argu, int);
+			else if (*format == 'c') /* checks and handles %C character */
+			{
+				char c = va_arg(list_of_argu, int);
 
-						write(1, &c, 1);
-						jambo++;
+				write(1, &c, 1);
+				jambo++;
 					}
 
 
-			else if (*format == 's')/*checks and handles %s charateres*/
-				{
-						char *str = va_arg(list_of_argu, char*);
-						int str_len = 0;
+			else if (*format == 's') /*checks and handles %s charateres*/
+			{
+				char *str = va_arg(list_of_argu, char*);
+				int str_len = 0;
 
 						/*calculate lentgh of strin*/
 			while (str[str_len] != '\0')
